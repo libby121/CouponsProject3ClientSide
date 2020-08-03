@@ -1,0 +1,30 @@
+ 
+ <!-- <div class="card" style="width: 28rem;"> -->
+  <!-- <img class="card-img-top"  src="assets\images\{{coupon?.image}}"  alt={{coupon.title}} > -->
+
+     <!-- <div class="card-body"> -->
+      <!-- <h1 class="card-title">{{coupon.title}}</h1> -->
+      <!-- <h2 class="card-text">{{coupon.price| currency:'ILS'}}</h2> -->
+      <!-- <h3  class="card-text">{{coupon.startDate | date}} - {{ coupon.endDate| date}}</h3> -->
+
+      <!-- <p class="card-text"> -->
+        <!-- {{coupon.description}}</p> -->
+         <!-- <button class="btn btn-primary btn-block" (click)="addToCart()">Add to Cart</button> -->
+      <!-- </div> -->
+  <!-- </div> -->
+  <div id="card">
+  <div class="card" style="width: 120rem;">
+      <img class="card-img-top"  src={{imageUrls[coupon?.id]}} alt={{coupon.title}} >
+
+   
+   <div class="card-body"   >
+      <h1 class="card-title">{{coupon.title}}</h1>
+  <h2 class="card-text">{{coupon.price| currency:'ILS'}}</h2>
+  <h3  class="card-text">{{coupon.startDate | date}} - {{ coupon.endDate| date}}</h3>
+    
+    
+        <p class="card-text">{{coupon.description}}</p> 
+          <button class="btn btn-primary btn-block" (click)="addToCart()">Add to Cart</button>
+   </div>
+</div>
+ 

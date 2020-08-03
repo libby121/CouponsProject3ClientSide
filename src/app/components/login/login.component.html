@@ -1,0 +1,20 @@
+<form class="form-signin" [formGroup]="form">
+    <h1>Please sign in</h1>
+    <input type="email"  class="form-control" placeholder="Email address"
+    formControlName="email"  autofocus><br>
+    <input type="password"  class="form-control" placeholder="Password"
+    formControlName="password" ><br>
+      <select class="form-control"
+      formControlName="client">
+          <option selected>Client type</option>
+        <option *ngFor="let c of clientTypes">{{c}}
+        </option>
+        </select>  
+    <br><br>
+    <button class="btn btn-lg btn-block btn-primary" 
+    (click)="login()"
+    [disabled]="form.invalid"
+    >Sign in
+      
+    </button>
+

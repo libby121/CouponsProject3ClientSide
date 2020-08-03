@@ -1,0 +1,4 @@
+<ul class="list-group" >
+    <li class="list-group-item" (click)="showAll()" [class.active]="!category">All Categories</li>
+    <li *ngFor="let c of categories" class="list-group-item" [class.active]="c===category" (click)="filterByCategory(c)">{{c}}</li>
+</ul>

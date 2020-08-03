@@ -1,0 +1,54 @@
+button:focus { outline: none; }
+h2{
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(189, 178, 178);
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ td, th{
+    /* padding: 1%; */
+     font-size: 19px;
+     }
+ 
+ 
+ 
+ 
+    
+    
+    
+    
+    
+    
+ 
+ 
+div{
+    margin-left: 5%;
+    margin-right:10%;
+}
+
+#datatable{
+   
+  
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: large;
+}
+#noContent{
+    margin-top:9.5%;
+   font-size: large;
+   font-family: cursive;
+    margin-left: 50%;   
+ }
+ img{
+    border-radius: 90%;
+ width:15rem;
+    height: 10vw;
+     
+ }
+ #noCoupon{
+    width:8rem;
+     
+ }
+    

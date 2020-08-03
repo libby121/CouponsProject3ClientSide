@@ -1,0 +1,15 @@
+ <div>
+     <div *ngIf="!isCancel">
+     <h4>coupon {{coup?.title}} was successfully purchased</h4>
+     <br>
+ 
+     <h5>Do you approve?</h5>
+     <div>
+     <button (click)="close()" id="approve">I do</button> 
+     <button (click)='cancel()'>I wanna cancel </button> </div>
+    </div> 
+    <!-- <div  *ngIf="isCancel"> -->
+     <!-- <h4>Your order was successfully canceled</h4> -->
+     <!-- <button (click)="close()">Back</button> -->
+    <!-- </div> -->
+ </div>

@@ -1,0 +1,35 @@
+ <customer-bar></customer-bar>
+ <br>
+
+ <div class="row">
+
+    <div class="col-3">
+ 
+ 
+ 
+<category-filter-bar [coupons]="coupons" (data)="getFiltered($event)" (all)="showAll($event)"></category-filter-bar>
+     </div>
+     <div class="col">
+        <div *ngIf="isNoContent" id="noContent">
+            
+            no coupons yet..
+        <img width="15%"  src="assets/images/not-found3.png" >
+           
+    </div>
+
+        <div class="container" *ngIf="coupons && !filteredCoupons">
+           
+            <app-coupon-buy *ngFor="let c of coupons" [coupon]="c" ></app-coupon-buy> </div>
+            <div class="container" *ngIf="filteredCoupons">
+            
+            <app-coupon-buy *ngFor="let c of filteredCoupons" [coupon]="c">
+             
+            </app-coupon-buy></div>
+        </div>
+    </div>
+      
+ 
+ 
+ 
+ 
+

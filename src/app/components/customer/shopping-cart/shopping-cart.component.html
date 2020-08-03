@@ -1,0 +1,71 @@
+<customer-bar></customer-bar>
+<br>
+<div>
+    <table class="table table-hover" *ngIf="CartCoupons?.length>0">
+        <tr>
+            <th>Coupon</th>
+             <th>Price</th>
+            <th>Date</th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+
+
+        </tr>
+        <tr *ngFor="let c of CartCoupons">
+            <td><br>
+ 
+
+
+                {{c.title}}<br>
+                <button id="imgBtn" [routerLink]="['/coupon/',c.id]"  routerLinkActive="router-link-active">
+                <img id="imgg" src={{imageSrcs[c?.id]}} alt={{c?.title}} width="220rem">
+            </button>
+            </td>
+
+
+
+            <td><br><br>{{c.price | currency:'ILS'}}</td>
+            <td><br><br>{{c.startDate | date}} - {{c.endDate | date}}</td>
+            <td><br>
+                <button   class="btn btn-white" [routerLink]="['/coupon/',c.id]"
+                    routerLinkActive="router-link-active">
+                  Display
+                </button>
+            </td>
+            <td> <br>
+                <button class="btn btn-primary" (click)="buy(c.id)">
+                    Buy Now
+                </button>
+            </td>
+            <td> <br>
+                <button class="btn btn-danger" (click)="remove(c.id)">
+                    Remove
+                </button>
+            </td>
+         
+         
+         
+         
+         
+
+
+
+        </tr>
+        <tr>
+
+
+
+
+
+
+        </tr>
+    </table>
+    <br>
+    <button class="btn btn-danger" *ngIf="CartCoupons?.length>0" (click)="removeAll()">Clear Shopping Cart</button>
+</div>
+<span id="noContent" *ngIf="(CartCoupons?.length==0)">
+    no coupons in your cart..
+    <img width="70px" src="assets/images/not-found2.png">
+</span>

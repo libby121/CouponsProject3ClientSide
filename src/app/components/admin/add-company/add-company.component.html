@@ -1,0 +1,20 @@
+<admin-bar></admin-bar>
+<br>
+<h2>Company Details:</h2>
+<br><br>
+<form [formGroup]="form">
+    <input class="form-control" type="text" placeholder="name" formControlName="name">
+    <div *ngIf="name.touched && name.errors?.required" class="alert alert-danger">Company name is required</div><br>
+    <input class="form-control" type="email" placeholder="email" formControlName="email">
+    <div class="alert alert-danger" *ngIf="email.touched && email.errors?.required">email is required</div> 
+    <div *ngIf="email.touched && email.errors?.email" class="alert alert-danger">Incorrect Email</div><br>
+    <input class="form-control" type="password" placeholder="password" formControlName="password">
+<div class="alert alert-danger" *ngIf="password.touched && 
+password.errors?.required">Password is required</div>
+<div *ngIf="password.touched && password.errors?.pattern" class="alert alert-danger">
+    Password must be 6 digits or more, and contain at least one number and one letter</div>
+   <br><br>
+<button class="btn btn-lg btn-block" 
+(click)="addCom()" [disabled]="form.invalid"
+>Submit</button>
+</form>

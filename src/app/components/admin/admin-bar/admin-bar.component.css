@@ -1,0 +1,38 @@
+body,html{
+    width: 100%;
+    
+}
+.bar{
+    background-color:honeydew;
+    /* display: grid; */
+    /* grid-template-columns:auto auto auto ; */
+   /*  */
+ 
+}
+div{
+ width:100%;
+ margin-right: 10%;
+ margin-left: 10%;
+ margin-top: 0.3px;
+ text-align: center;
+}
+ button :active{
+border: 3% solid grey;
+ 
+ 
+   
+}
+/* button:hover{ */
+    /* opacity: 80%; */
+/* } */
+/*  */
+button{
+    
+    border: rgb(230, 222, 222) 1.6px solid;
+    padding: 0.96%;
+     
+    width: 20%;
+    color:rgb(233, 210, 168); 
+    /* color: rgb(151, 141, 141); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

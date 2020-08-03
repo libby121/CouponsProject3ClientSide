@@ -1,0 +1,99 @@
+body,html{
+    height: 100%;
+   
+}
+ div *{
+    color:rgb(233, 210, 168); 
+    /* color: rgb(151, 141, 141); */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#allCom{
+  background-color: tomato;
+}
+#allCust{
+ 
+background-color: rgb(92, 202, 191);
+}
+#viewDelete{
+    background-color: rgb(199, 137, 22);
+}
+#addCust{
+ 
+background-color: purple;
+text-align: center;
+
+ }
+#addCom{
+background-color: rebeccapurple;
+text-align:  initial;
+
+}
+#allCoups{
+    background-color: rgb(199, 137, 22);
+
+    ;
+    text-align: center;
+
+}
+h2{
+    margin-top: 3%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 70px;
+    margin-right: 60%;
+        color: rgb(128, 13, 151);
+
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#actions{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr ; 
+    grid-template-rows:1fr 1fr;
+    height: 100%;
+    /* grid-template-columns: 50% 50% ; */
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+    margin-top: 10px;
+}
+p{
+    font-size: 25px;
+
+}
+h4{
+    font-size:30px ;
+    
+ }
+#addCom >h4,#addCust >h4, #viewDelete>h4{
+     margin-top: 60px;
+ }
+div >h3{
+     margin-bottom: 20px;
+    margin-left: 8px;
+    margin-right: 150px;
+    font-weight: bold;
+    font-size: 40px;
+}
+#actions div{
+    text-align: center;
+    padding: 30px;
+    border: 4px white solid;
+   border-radius: 10px;
+   height: 220px;
+   /* width: 350px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+ 
+ 
+ 
+ 
+}
+
+
+#actions div:hover{
+   
+    cursor: pointer;
+}

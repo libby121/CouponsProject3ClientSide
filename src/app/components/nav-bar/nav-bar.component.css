@@ -1,0 +1,54 @@
+
+.myBar{
+    background-color: rgb(112, 69, 190);
+    font-family: cursive;
+    overflow: hidden;
+    ;
+
+}
+ 
+ .btnNav{
+     font-size: 20px;
+     margin-right: 10px;
+ }
+ 
+.fill{
+    flex:1 1 auto
+}
+.myIcon a:active,.myIcon a:focus{
+    outline: blueviolet;
+        
+    }
+ .myIcon a {
+        padding: 0;
+        width: 120px;
+        height: 120px;
+    
+    }
+    button{
+        outline: none;
+         background-color:  blueviolet;
+
+    }
+     
+        
+.btnNav{
+    border: none;
+    background: none;
+    color: white;
+    font-weight: 500;
+ 
+    
+
+} 
+ button >{
+    font-family: 'Courier New', Courier, monospace;
+
+ }
+  
+ 
+ 
+ 
+ 
+ 
+  

@@ -1,0 +1,60 @@
+     #datatable{
+         margin-top: 0.5%;
+        margin-right: 8%;
+        margin-left: 8%;
+       cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    }
+    table * {
+        border:0.5px aliceblue solid
+    }
+   table  td{
+    padding: 1%;
+    }
+     #all{
+        width: 160px;
+        height: 50px;
+        border: rgb(116, 14, 116) solid 1px;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(28, 42, 230);
+    padding: 13px;    margin-left: 50px;
+        font-size: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+     
+    }
+    
+     button:active, button:focus{
+        outline: none;
+        cursor: pointer;
+        
+        }    h2{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 30px;
+        color: rgb(189, 178, 178);
+        font-weight: bolder;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #SearchInput{
+        width: 180px;
+        height: 50px;
+        border-radius: 10px;
+         margin-top:0px;
+         margin-left: 20px;
+         border:grey solid 2px;
+         display: inline-block;
+         cursor: pointer;
+     
+      
+    }
+    #noContent{
+        margin-top:9.5%;
+       font-size: x-large;
+       font-family: cursive;
+        margin-left: 50%;   
+     }
+        

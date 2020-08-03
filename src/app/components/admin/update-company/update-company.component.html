@@ -1,0 +1,20 @@
+<div id="update">
+<p >{{name.value}}</p>
+<form [formGroup]="form">
+  
+<div>
+     <input class="form-control" type="email" placeholder="email" formControlName="email">
+     <div class="alert alert-danger" *ngIf="email.touched && email.errors?.required">Email is required</div>
+     <div class="alert alert-danger" *ngIf="email.touched && email.errors?.email">Email is Incorrect</div></div>
+<br>
+
+    <input class="form-control" type="password" placeholder="password" formControlName="password">
+    <div class="alert alert-danger" *ngIf="password.touched && password.errors?.required">Password is reauired</div>
+    <div class="alert alert-danger" *ngIf="password.touched && password.errors?.pattern">
+        Password must be 6 charaters or more, on contain at least one numeric digit and one letter</div>
+
+     <br><br>
+    <button id="send" class="btn btn-lg btn-block" (click)="editCom()">Submit</button>
+    <button class="btn btn-lg btn-block" (click)="close()">Back</button>
+</form>
+</div>

@@ -1,0 +1,26 @@
+ 
+.btn.btn-lg.btn-block{
+    background-color: rgb(99, 43, 145);
+ 
+    color: white;
+}
+.form-control.ng-touched.ng-invalid{
+  border: orangered solid 1px;
+}
+h1{
+  font-weight: lighter;
+  margin-top: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-signin {
+  margin-bottom: 0em;   padding-top:0;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+height: 80%;
+    max-width: 20%;
+     margin: auto;
+  }
+  /* .btn.btn-lg.btn-block:hover{ */
+   /* opacity: 80%; */
+  /* } */
+  
+  
+  

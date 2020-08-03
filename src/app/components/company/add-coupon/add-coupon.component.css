@@ -1,0 +1,102 @@
+.btn{
+    /* background-color: rgb(92, 202, 191); */
+    background-color: rgb(99, 43, 145);
+
+    color: white;
+
+ 
+}
+.card-img-top {
+  margin-top: none;
+  height: 20vw;
+  object-fit: unset;
+}
+.row{
+  margin-top: 40px;
+  margin-left: 20%;
+  margin-right:10%;
+  text-align: center;
+  
+  
+}
+
+
+
+#upload{
+  background-color: blue;
+  text-align: center;
+}
+.col-md-6{
+ /* width: auto;    */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+#imageTitle{
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  text-align: left;
+
+}
+ 
+h3,p{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: large;
+}
+ 
+ 
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(92, 74, 109);
+    font-weight: bolder;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.form-control.ng-touched.ng-invalid{
+    border: orangered solid 1px;
+  }
+  .btn:hover{
+    
+    cursor: pointer;
+
+  }
+  /* form div { */
+/* text-align: center;  */
+  /* } */
+  input{
+    text-align: left;
+    height: 18%;
+    padding: 2%;
+    
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+
+.addImage 
+ {  
+   border:1px solid rgb(202, 189, 189);
+   border-radius: 12px;
+   padding: 10px;
+   height: fit-content;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  cursor: pointer;
+  text-align: left;
+
+}
+
+
+  

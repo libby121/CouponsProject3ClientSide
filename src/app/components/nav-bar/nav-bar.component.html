@@ -1,0 +1,29 @@
+
+
+<mat-toolbar class="myBar " color="accent">
+    <button class="btnNav" (click)="goHome()">
+        Home
+    </button>
+<span class="fill"></span>
+
+
+<button  *ngIf="! this.service.isLogged && !isSession " class="btnNav" (click)="loginNav()">
+    Login
+    <!-- <mat-icon>login</mat-icon> Login  -->
+</button>
+<!-- <button mat-icon-button class="myIcon"> -->
+<!-- <mat-icon>settings</mat-icon> -->
+<!-- </button> -->
+<button  *ngIf="this.service.isLogged || isSession" class="btnNav" 
+(click)="logout()">Logout
+ </button>
+</mat-toolbar>
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 

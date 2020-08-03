@@ -1,0 +1,118 @@
+#page{
+    display: grid;
+    grid-template-rows: 12% 88%;
+    cursor: pointer;
+
+ 
+    
+ }
+small{
+    font-size: 20px;
+    margin-left: 40px;
+}
+.container{
+margin-left: 5px;
+     display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto; 
+       cursor: pointer;
+}
+#plus, #page{
+    position: fixed;
+}
+#priceInput{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+     margin-top:0px;
+     margin-left: 20px;
+     border:grey solid 2px;
+     display: inline-block;
+     cursor: pointer;
+ 
+  
+}
+button:active, button:focus{
+outline: none;
+cursor: pointer;
+
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 45px;
+    color: rgb(79, 11, 88);
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+#noContent{
+
+     margin-left: 100px;
+     cursor: pointer;
+
+}
+#nextBtn{
+    background-color: rgb(92, 202, 191);
+    color: white;}
+
+ #table{
+       cursor: pointer;
+      position: fixed;
+      cursor: pointer;
+ width: 85%;
+ margin-top:80px;
+margin-bottom: 20px;
+ margin-right: 20px;
+ margin-left: 230px;
+       /* position: absolte; */
+      /* top: 400;left:10;right:10; */
+  }
+
+
+
+
+.container>div{
+    width: 190px;
+    height: 100px;
+    border-radius: 9px;
+     text-align: center;
+    opacity: 80%;
+    text-align: left;
+    padding: 10px;
+    font-size:20px;
+    color: rgb(189, 178, 178);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+
+ 
+}
+.container>div:hover{
+    opacity: 100%;
+}
+#f{
+    background-color: tomato;
+ 
+}
+#t{
+    background-color: rgb(67, 167, 157);
+
+}
+#p{
+    background-color: purple;
+
+}
+#h{
+    background-color: rebeccapurple;
+
+}
+#c{
+background-color: mediumorchid;
+}
+#co{
+background-color: rgb(4, 141, 136);
+}
+#b{
+background-color: rgb(243, 216, 166);
+}

@@ -1,0 +1,63 @@
+<admin-bar></admin-bar>
+<br><br> 
+ <!-- <div   *ngIf="customers.length>0"> -->
+<div>
+    <input id="SearchInput" type="number" class="form-control" 
+ placeholder=" 
+Customer Id"  name="id" [(ngModel)]="customerId"  >
+<button mat-icon-button (click)="byId()"> 
+    <mat-icon>search</mat-icon>
+</button>
+<button id="all" (click)="showAll()">All Customers</button>
+
+</div><br><br> 
+<div id="datatable">
+<table  datatable [dtOptions]="dtOptions" *ngIf="customers" class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+
+            <th scope="col">Name</th>
+           <th scope="col">Last Name</th>
+           <th scope="col">Email</th>
+           <th scope="col">Password</th>
+           <th scope="col">Revenue (ILS)</th>
+            <th scope="col">Edit</th>
+           <th scope="col">Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customers">
+            <th scope="row"></th>
+            <td>{{c.id}}</td>
+
+            <td>{{c.firstName}}</td>
+            <td>{{c.lastName}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.password}}</td>
+            <td *ngIf="c.revenue>0">{{c.revenue }}</td>
+            <td *ngIf="c.revenue===0">{{0}}</td>
+
+            <td>
+                <button mat-icon-button class="button" (click)="edit(c.id)" >
+                <mat-icon >edit</mat-icon>
+            </button>
+            </td>
+            <td>
+                <button mat-icon-button class="button" (click)="delete(c.id)" >
+                <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+           
+        </tr>
+    </tbody>
+
+</table></div>
+<!-- <div *ngIf="customers" id="noContent"> -->
+<!--          -->
+    <!-- no customers yet..     -->
+<!-- <img width="15%"  src="assets/images/no-content.png" > -->
+<!--  -->
+<!--   -->
+<!-- </div> -->

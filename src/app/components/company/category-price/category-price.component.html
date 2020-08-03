@@ -1,0 +1,89 @@
+ <!-- <h2 *ngIf="up!=null -->
+ <!-- ">loading..</h2> -->
+ <company-bar></company-bar>
+ 
+  <h2 *ngIf="!category &&  !toggleNum  ">
+<mat-icon>west</mat-icon>
+Pick a Category or Price </h2>
+<h2 *ngIf="category">{{category}} <small> {{lastUpdate | date 
+     :'dd/MM/yyyy'}} 
+</small><mat-icon>update</mat-icon>
+</h2>
+<h2 *ngIf="toggleNum && !category && price && !eli " #priceMsg >
+  {{companyName}} coupons <small > {{lastUpdate | date }}
+</small><mat-icon>update</mat-icon>
+
+      </h2>
+<div id="page">
+    <div>
+    <input id="priceInput" type="number" class="form-control" 
+name="price" [(ngModel)]="price"
+placeholder="Search by Price" >
+<button mat-icon-button (click)="byPrice()"> 
+    <mat-icon>search</mat-icon>
+</button>
+</div>
+ <div class='container'>
+    <div id="f" (click)="getByCategory(categories[0])">Food</div>
+     <div id="b" (click)="getByCategory(categories[1])">Beauty</div>
+    <div id="h" (click)="getByCategory(categories[2])">Home</div>
+    <div id="c"(click)="getByCategory(categories[3])">Clothing</div>
+    <div id="co" (click)="getByCategory(categories[4])">Travel</div>
+    <div id="p" (click)="getByCategory(categories[5])">Pets</div>
+    </div>
+    
+
+
+
+<!-- <div *ngIf="!isChosen" id="noContent">mmm..seems like no coupons were found by this category</div> -->
+<div *ngIf="isChosen" id="table">
+ <table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+             <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+            <th scope="col">Start_Date</th>
+            <th scope="col">End_Date</th>
+             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Preview</th>
+         </tr>
+    </thead>
+                        
+ <tbody >
+    <tr *ngFor="let c of coupons">
+        <th scope="row"></th>
+        <td>{{c.title}}</td>
+         <td>{{c.amount}}</td>
+        <td>{{c.price | currency:'ILS'}}</td>
+        <td>{{c.startDate | date}}</td>
+        <td>{{c.endDate | date}}</td>
+         <td>
+            <button mat-icon-button class="button" (click)="edit(c.id)" >
+            <mat-icon >edit</mat-icon>
+        </button>
+        </td>
+        <td>
+            <button mat-icon-button class="button" (click)="delete(c.id)">
+            <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+        <td>
+            <button mat-icon-button class="button"
+            [routerLink]="['/preview/',c.id]" routerLinkActive="router-link-active" >
+            <mat-icon>preview</mat-icon>
+            </button>
+        </td>
+    </tr>
+</tbody>
+</table>
+ 
+ <!-- <button id="nextBtn" class="btn btn-lg" *ngIf="coupons.length>7">Next Page</button> -->
+
+
+
+
+</div>
+ 

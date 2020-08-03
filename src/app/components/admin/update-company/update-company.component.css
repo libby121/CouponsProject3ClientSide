@@ -1,0 +1,40 @@
+button{
+color: aliceblue;
+border:1px rgb(243, 237, 237) solid; 
+height: 40px;
+ 
+ 
+ 
+}
+
+
+
+
+ #send{
+     background-color: blueviolet;
+ }
+ p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+text-align: center;
+}
+
+    div *{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+    }
+  
+  
+  
+    .form-control.ng-touched.ng-invalid{
+        border: orangered solid 1px;
+      }
+      #update input{
+width: 300px;
+height: 58px;
+        
+      }
+      .alert{
+max-height: fit-content;
+width: 300px;
+      }

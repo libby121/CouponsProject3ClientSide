@@ -1,0 +1,91 @@
+<company-bar></company-bar>
+<!-- <button class="btn btn-primary">Back to All Coupons</button> -->
+<br><br>
+<div class="row">
+
+    <div class="col-md-6">
+        <form #f="ngForm">
+            <input type="text" #title="ngModel" required [(ngModel)]="upTitle" name="title" id="title"
+                class="form-control" placeholder="Title">
+            <div *ngIf="title.touched && title.invalid" class="alert alert-danger">Title is required and Must be
+                unique
+            </div>
+            <br>
+            <select class="form-control" [(ngModel)]="categ" #category="ngModel" id="category" name="category"
+                (change)="change($event)" >
+                <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+            </select>
+            <br>
+
+
+            <textarea class="form-control" ngModel id="description" [(ngModel)]="desc" name="description"
+                #description="ngModel" placeholder="Description"></textarea>
+            <br>
+            <input type="number" class="form-control" required [(ngModel)]="amou" ngModel name="amount" id="amount"
+                #amount="ngModel" placeholder="Quantity">
+            <div class="alert alert-danger" *ngIf="amount.touched && amount.invalid"> Quantity is required</div>
+            <div class="alert alert-danger" *ngIf="amount.touched && amount.value==0"> Quantity is required and should
+                be a valid number</div>
+
+            <br>
+            <input type="number" class="form-control" placeholder="Price" required [(ngModel)]="pri" name="price"
+                id="price" ngModel #price="ngModel">
+            <div class="alert alert-danger" *ngIf="price.touched && price.invalid">Price is required</div>
+            <br>
+            <input type="date" class="form-control" placeholder="Start_Date" [(ngModel)]="date1" name="startDate"
+                id="startDate" required ngModel #start="ngModel">
+            <div class="alert alert-danger" *ngIf="start.touched && start.invalid">Start Date is required
+                and cannot be today
+            </div>
+            <br>
+            <input type="date" class="form-control" placeholder="End_Date" [(ngModel)]="date2" name="endDate" required
+                id="endDate" ngModel #end="ngModel">
+            <div class="alert alert-danger" *ngIf="end.touched && end.invalid">End Date is required</div>
+            <br>
+            <div class="addImage">
+                <p id="imageTitle">Select an Image:</p><br>
+                <!-- <input type="radio" name="image" value="desk"  class="addImage" (change)="uploadMethod($event)">Desktop upload -->
+
+                <!-- <input type="radio" name="image" value="web" class="addImage" (change)="uploadMethod($event)">Web URL -->
+
+                <!-- <br>  -->
+                <!-- <br> -->
+            <input   type="file" id="img" class="form-control" enctype="multipart/form-data" (change)="selectFile($event)
+            "><br>
+    
+                <!-- <input *ngIf="uploadType=='web'" type="text" class="form-control"  placeholder="image web url"><br><br> -->
+                <div>
+                    <button class="btn btn-primary" id="upload" (click)="uploadFile()" *ngIf="isImage">Upload file</button>
+                </div>
+
+            </div><br>
+  
+  
+            
+            <button *ngIf="!id" class="btn btn-lg btn-block" (click)="add2(f.value)" [disabled]="f.invalid">Add</button> <br>
+            <button *ngIf="id" class="btn btn-lg btn-block" (click)="update(f.value)"  [disabled]="f.invalid">Update</button> <br>
+        </form>
+    </div>
+    <div class="col-md-6 " style="width: 28rem;">
+        <div class="card" style="width: 28rem;">
+            <h3 *ngIf="!ImageUrl && !id" style="color:rgb(187, 179, 179)">Choose an Image</h3>
+            <img class="card-img-top"  *ngIf="isImage" [src]="ImageUrl"  alt={{title?.value}}>
+            <img class="card-img-top" id="myimg"  *ngIf="!ImageUrl" alt={{title?.value}}  >
+
+            <div class="card-body" style="width: 28rem;"  >
+                <h1 *ngIf="title.pristine && !id" style="color:rgb(187, 179, 179)">Fill in title field</h1>
+                <h1 class="card-title">{{title.value}}</h1>
+                <h2 class="card-title" *ngIf="price.pristine && !id" style="color:rgb(187, 179, 179)">Fill in price
+                    field</h2>
+
+                <h2 class="card-text">{{price.value | currency:'ILS'}}</h2>
+                <h3 class="card-text" *ngIf="start.pristine && !id" style="color:rgb(187, 179, 179)">Fill in Dates</h3>
+
+                <h3 *ngIf="start" class="card-text">{{start.value | date}} - {{ end.value | date}}</h3>
+                <p class="card-text" *ngIf="description.pristine && !id" style="color:rgb(187, 179, 179)">Fill in
+                    description field</p>
+                <p class="card-text">{{description.value}}</p>
+            </div>
+        </div>
+    </div>
+</div>

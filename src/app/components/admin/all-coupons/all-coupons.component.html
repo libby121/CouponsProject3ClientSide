@@ -1,0 +1,83 @@
+<!-- <h2 >All coupons</h2> -->
+<admin-bar></admin-bar>
+<br><br>
+<div  >
+<!-- <table datatable [dtOptions]="dtOptions" *ngIf="allCoups"  class="table table-hover table-striped table-bordered" -->
+<!-- data-toggle="table" data-sort-name="Company" data-sort-order="asc"> -->
+<table  id="datatable" class="table  table-hover table-striped" *ngIf="allCoups?.length>0">
+    <!-- <thead> -->
+        <tr>
+            <th>#</th>
+            <th>Company</th>
+            <th>Coupon</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price (ILS)</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th ></th>
+            <!-- <th scope="col">Preview</th> -->
+
+
+         
+         
+         
+         </tr>
+    <!-- </thead> -->
+        <!-- <tbody> -->
+            <tr *ngFor="let c of allCoups">
+                <th scope="row"></th>
+                <td>{{c?.company.name}}</td>     
+
+                <td>{{c?.title}}</td>
+                <td>{{c?.category}}</td>
+                 <td>{{c?.amount}}</td>
+                <td>{{c?.price }}</td>
+                <td>{{c?.startDate}}</td>
+                <td>{{c?.endDate}}</td>
+                <td>
+                  
+                  
+                                      
+                    
+                    <img class="card-img-top"  src={{imageSrcs[c?.id]}} alt={{c?.title}}  >
+ 
+
+                  
+                  
+
+                  
+
+                </td>
+                <!-- <td> -->
+                    <!-- <button mat-icon-button class="button" -->
+                    <!-- [routerLink]="['/coupon/',c.id]" routerLinkActive="router-link-active" > -->
+                    <!-- <mat-icon>preview</mat-icon> -->
+                    <!-- </button> -->
+                <!-- </td> -->
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            </tr>
+        <!-- </tbody> -->
+ </table></div>       <div *ngIf="allCoups?.length==0" id="noContent">
+           
+    no coupons yet..
+<img width="10%"  id="noCoupon" src="assets/images/not-found3.png" >
+   
+</div>
+
+
+
+
+

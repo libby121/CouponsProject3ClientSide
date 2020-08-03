@@ -1,0 +1,35 @@
+<!-- <h2>Administrator dashboard</h2> -->
+<div id="actions">
+<div id="allCom" (click)="navAllCom()"> 
+           <h3 *ngIf="numOfCompanies">{{numOfCompanies}}</h3>
+        <h4>Active companies</h4>
+        <p>watch, update, delete</p>
+    
+</div>
+<div id="allCust" (click)="navAllCust()">
+    <h3 *ngIf="numOfCustomers">{{numOfCustomers}}</h3>
+    <h4>Active customers</h4>
+    <p>watch, update, delete</p>
+</div>
+<div id="addCom" (click)="navAddCom()">
+    <h4>
+    Add a company
+    </h4>
+</div>
+<div id="addCust" (click)="navAddCust()">
+    <h4>
+    Add a customer
+</h4>
+</div>
+<div id="allCoups" (click)="navallCoup()">
+    <h3 *ngIf="numOfCoupons>0">{{numOfCoupons}}</h3>
+
+    <h4>
+  Active coupons
+</h4>
+<p>watch wE-shop coupons</p>
+
+</div>
+
+
+

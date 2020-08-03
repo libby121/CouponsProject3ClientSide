@@ -1,0 +1,19 @@
+ <customer-bar></customer-bar>
+  
+ <div class="card" style="width: 35rem;">
+   
+  <img class="card-img-top" id="myimg"  alt="coupon image"  width="90px">
+ 
+
+     <div class="card-body">
+      <h1 class="card-title">{{coupon?.title}}</h1>
+      <h2 class="card-text">{{coupon?.price| currency:'ILS'}}</h2>
+      <h3  class="card-text">{{coupon?.startDate | date}} - {{ coupon?.endDate| date}}</h3>
+
+      <p class="card-text">
+        {{coupon?.description}}</p>
+       </div>
+  </div>
+  
+ 
+ 

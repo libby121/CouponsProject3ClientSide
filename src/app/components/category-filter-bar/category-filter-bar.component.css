@@ -1,0 +1,10 @@
+.list-group{
+    margin-top:9.5%;
+     font-size: x-large;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-left: 50%;
+}
+.list-group-item{
+    padding:10%;
+    cursor: pointer;
+}

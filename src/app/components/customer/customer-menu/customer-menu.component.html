@@ -1,0 +1,22 @@
+<h2>Hello {{customerName}} !</h2>
+<div id="container">
+<div id="all" (click)="navAll()">
+    <h4>
+        <h3 *ngIf="coupNum">{{coupNum}}</h3><br>
+        <h4>Total purchases</h4>
+        <br>
+        <p>watch all purchases</p>
+    </h4>
+</div>
+<!-- <div id="by" (click)="navCat()"> -->
+    <!-- <h4>Choose Category or Price</h4> -->
+    <!-- <br> -->
+    <!-- <p>watch your purchases</p> -->
+<!-- </div > -->
+<div id="add" (click)="navToPurchase()">
+    <h4>Find Coupons</h4>
+</div>
+<div id="cart" (click)="navCart()">
+    <h4>My Shopping Cart</h4> 
+</div>
+</div>
